@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const interSans = Inter({
-  variable: "--font-inter-sans",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Moonshot - Your personal assistant",
@@ -19,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${interSans.className} antialiased`}>{children}</body>
+      <body className={`antialiased dark`}>{children}</body>
     </html>
   );
 }
