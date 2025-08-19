@@ -1,8 +1,10 @@
-import { MessageStackProps } from '@/lib/types'
 import React from 'react'
 import ChatMessageBubble from './ChatMessageBubble'
+import { useChatContext } from '@/context/ChatContext'
 
-const MessageStack = ({ messages }: MessageStackProps) => {
+const MessageStack = () => {
+  const { messages } = useChatContext()
+
   return (
     <>
       {

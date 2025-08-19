@@ -10,7 +10,3 @@ export interface ChatMessageBubbleProps {
   role: ChatRole;
   content: string;
 }
-
-export interface MessageStackProps {
-  messages: Message[];
-}
