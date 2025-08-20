@@ -1,6 +1,7 @@
 import { ChatMessageBubbleProps } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import React from "react";
+import MarkdownRenderer from "../MarkdownRenderer";
 
 const ChatMessageBubble = ({ role, content }: ChatMessageBubbleProps) => {
   return (
@@ -18,7 +19,9 @@ const ChatMessageBubble = ({ role, content }: ChatMessageBubbleProps) => {
               role === "user" && "bg-[#323232d9]"
             )}
           >
+            <MarkdownRenderer>
               {content}
+            </MarkdownRenderer>
           </div>
         </div>
       </div>
