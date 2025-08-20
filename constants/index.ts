@@ -109,84 +109,118 @@ export const fakeMessages: Message[] = [
   {
     id: 11,
     role: "assistant",
-    content: 'Here’s a classic example:  \n' +
-    '\n' +
-    '**Second‑order differential equation**\n' +
-    '\n' +
-    '\\[\n' +
-    "y''+2y'+y=0\n" +
-    '\\]\n' +
-    '\n' +
-    '(The equation is linear, homogeneous, with constant coefficients.)\n' +
-    '\n' +
-    '---\n' +
-    '\n' +
-    '### 1. Solve the characteristic equation\n' +
-    '\n' +
-    'For a constant‑coefficient ODE, we try \\(y=e^{rx}\\).  \n' +
-    'Substituting gives\n' +
-    '\n' +
-    '\\[\n' +
-    'r^{2}+2r+1=0 \\;\\Longrightarrow\\; (r+1)^{2}=0 .\n' +
-    '\\]\n' +
-    '\n' +
-    'So we have a repeated real root \\(r=-1\\).\n' +
-    '\n' +
-    '---\n' +
-    '\n' +
-    '### 2. Form the general solution\n' +
-    '\n' +
-    'When a root \\(r\\) is repeated \\(m\\) times (here \\(m=2\\)), the general solution is\n' +
-    '\n' +
-    '\\[\n' +
-    'y(x) = (C_{1}+C_{2}x)\\,e^{rx}.\n' +
-    '\\]\n' +
-    '\n' +
-    'With \\(r=-1\\):\n' +
-    '\n' +
-    '\\[\n' +
-    '\\boxed{\\,y(x)=(C_{1}+C_{2}x)\\,e^{-x}\\,}\n' +
-    '\\]\n' +
-    '\n' +
-    'where \\(C_{1}\\) and \\(C_{2}\\) are arbitrary constants determined by any initial or boundary conditions you might have.\n' +
-    '\n' +
-    '---\n' +
-    '\n' +
-    '#### Check\n' +
-    '\n' +
-    'Compute derivatives:\n' +
-    '\n' +
-    "* \\(y'=(C_{2}-C_{1}-C_{2}x)e^{-x}\\)\n" +
-    "* \\(y''=(C_{1}+C_{2}x-2C_{2})e^{-x}\\)\n" +
-    '\n' +
-    'Plug into the ODE:\n' +
-    '\n' +
-    '\\[\n' +
-    "y''+2y'+y = (C_{1}+C_{2}x-2C_{2})e^{-x}\n" +
-    '          +2(C_{2}-C_{1}-C_{2}x)e^{-x}\n' +
-    '          +(C_{1}+C_{2}x)e^{-x}=0,\n' +
-    '\\]\n' +
-    '\n' +
-    'so the solution satisfies the equation.\n' +
-    '\n' +
-    '---\n' +
-    '\n' +
-    '**: Adding an initial condition**\n' +
-    '\n' +
-    "If you also specify \\(y(0)=3\\) and \\(y'(0)=1\\), we can determine \\(C_{1}\\) and \\(C_{2}\\):\n" +
-    '\n' +
-    '* \\(y(0)=C_{1}\\cdot1=3 \\;\\Rightarrow\\; C_{1}=3\\)\n' +
-    "* \\(y'(0)=(C_{2}-C_{1})=1 \\;\\Rightarrow\\; C_{2}=1+C_{1}=4\\)\n" +
-    '\n' +
-    'Thus the particular solution would be\n' +
-    '\n' +
-    '\\[\n' +
-    'y(x)=(3+4x)e^{-x}.\n' +
-    '\\]\n' +
-    '\n' +
-    '---\n' +
-    '\n' +
-    'Feel free to ask if you’d like a different type of second‑order ODE (e.g., non‑homogeneous, variable coefficients, etc.) or a full step‑by‑step derivation for a more complex example!',
+    content:
+      "Here’s a classic example:  \n" +
+      "\n" +
+      "**Second‑order differential equation**\n" +
+      "\n" +
+      "\\[\n" +
+      "y''+2y'+y=0\n" +
+      "\\]\n" +
+      "\n" +
+      "(The equation is linear, homogeneous, with constant coefficients.)\n" +
+      "\n" +
+      "---\n" +
+      "\n" +
+      "## 1. Solve the characteristic equation\n" +
+      "\n" +
+      "For a constant‑coefficient ODE, we try \\(y=e^{rx}\\).  \n" +
+      "Substituting gives\n" +
+      "\n" +
+      "\\[\n" +
+      "r^{2}+2r+1=0 \\;\\Longrightarrow\\; (r+1)^{2}=0 .\n" +
+      "\\]\n" +
+      "\n" +
+      "So we have a repeated real root \\(r=-1\\).\n" +
+      "\n" +
+      "---\n" +
+      "\n" +
+      "## 2. Form the general solution\n" +
+      "\n" +
+      "When a root \\(r\\) is repeated \\(m\\) times (here \\(m=2\\)), the general solution is\n" +
+      "\n" +
+      "\\[\n" +
+      "y(x) = (C_{1}+C_{2}x)\\,e^{rx}.\n" +
+      "\\]\n" +
+      "\n" +
+      "With \\(r=-1\\):\n" +
+      "\n" +
+      "\\[\n" +
+      "\\boxed{\\,y(x)=(C_{1}+C_{2}x)\\,e^{-x}\\,}\n" +
+      "\\]\n" +
+      "\n" +
+      "where \\(C_{1}\\) and \\(C_{2}\\) are arbitrary constants determined by any initial or boundary conditions you might have.\n" +
+      "\n" +
+      "---\n" +
+      "\n" +
+      "### Check\n" +
+      "\n" +
+      "Compute derivatives:\n" +
+      "\n" +
+      "* \\(y'=(C_{2}-C_{1}-C_{2}x)e^{-x}\\)\n" +
+      "* \\(y''=(C_{1}+C_{2}x-2C_{2})e^{-x}\\)\n" +
+      "\n" +
+      "Plug into the ODE:\n" +
+      "\n" +
+      "\\[\n" +
+      "y''+2y'+y = (C_{1}+C_{2}x-2C_{2})e^{-x}\n" +
+      "          +2(C_{2}-C_{1}-C_{2}x)e^{-x}\n" +
+      "          +(C_{1}+C_{2}x)e^{-x}=0,\n" +
+      "\\]\n" +
+      "\n" +
+      "so the solution satisfies the equation.\n" +
+      "\n" +
+      "---\n" +
+      "\n" +
+      "### Adding an initial condition\n" +
+      "\n" +
+      "If you also specify \\(y(0)=3\\) and \\(y'(0)=1\\), we can determine \\(C_{1}\\) and \\(C_{2}\\):\n" +
+      "\n" +
+      "* \\(y(0)=C_{1}\\cdot1=3 \\;\\Rightarrow\\; C_{1}=3\\)\n" +
+      "* \\(y'(0)=(C_{2}-C_{1})=1 \\;\\Rightarrow\\; C_{2}=1+C_{1}=4\\)\n" +
+      "\n" +
+      "Thus the particular solution would be\n" +
+      "\n" +
+      "\\[\n" +
+      "y(x)=(3+4x)e^{-x}.\n" +
+      "\\]\n" +
+      "\n" +
+      "---\n" +
+      "\n" +
+      "Feel free to ask if you’d like a different type of second‑order ODE (e.g., non‑homogeneous, variable coefficients, etc.) or a full step‑by‑step derivation for a more complex example!",
+    timestamp: "2023-10-01T10:09:00Z",
+  },
+
+  {
+    id: 12,
+    role: "user",
+    content: "Need some code sample",
+    timestamp: "2023-10-01T10:09:00Z",
+  },
+
+  {
+    id: 13,
+    role: "assistant",
+    content:
+      "## Fix Heading Rendering in Markdown" +
+      "\n" +
+      "-----------------------------------" +
+      "\n" +
+      "### 1. Make Sure `prose` is Applied" +
+      "\n" +
+      "Wrap your renderer:" +
+      "\n" +
+      "```tsx" +
+      "\n" +
+      '<article className="prose prose-lg max-w-none dark:prose-invert">'+
+      "\n" +
+      "\t<MarkdownRenderer content={markdown} />"+
+      "\n" +
+      '</article>' +
+      "\n" +
+      "```" +
+      "\n" +
+      "This should already give you styled headings (`h1`, `h2`, etc.).",
     timestamp: "2023-10-01T10:09:00Z",
   },
 ];

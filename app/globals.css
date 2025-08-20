@@ -75,11 +75,20 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  font-family: 'Nunito';
-  font-size: 1.105em;
+  font-family: "Nunito";
+  font-size: 1.05em;
 }
 
-math{font-size: 1.1em;}
+.katex-display {
+  margin: 1em 0;
+  overflow-x: auto;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.katex {
+  font-size: 1.1em;
+}
 
 .dark {
   --background: oklch(0.145 0 0);
@@ -121,5 +130,33 @@ math{font-size: 1.1em;}
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .prose h1 {
+    @apply text-3xl font-bold mt-6 mb-4;
+  }
+
+  .prose h2 {
+    @apply text-2xl font-semibold mt-5 mb-3;
+  }
+  .prose h3 {
+    @apply text-xl font-medium mt-4 mb-2;
+  }
+  .prose h4 {
+    @apply font-normal text-xl mt-3 mb-1.5;
+  }
+  .prose hr {
+    @apply mt-4 mb-7;
+  }
+  code{
+    @apply bg-neutral-700 rounded px-1 py-0.5 text-[0.835em] font-mono;
+  }
+  pre div {
+    border-radius: var(--radius-xl) !important;
+  }
+  pre div code {
+    @apply rounded-none bg-transparent;
   }
 }

@@ -9,7 +9,7 @@ const ChatArea = () => {
     return (
     <ChatProvider>
       <div className="relative w-full h-full flex justify-center">
-        <div className="relative w-full md:max-w-3xl max-w-lg mx-4 mb-5">
+        <div className="relative w-full md:max-w-3xl max-w-lg px-4 mb-5">
           <section className="w-full h-full flex flex-col gap-y-5">
             <MessageStack />
           </section>
