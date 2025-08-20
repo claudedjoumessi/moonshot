@@ -64,7 +64,7 @@ const ChatInput = () => {
   };
 
   return (
-    <div className="relative bg-neutral-900 rounded-3xl shadow-2xl flex items-center pb-[55px]">
+    <div className="relative bg-neutral-900/90 backdrop-blur-md rounded-3xl shadow-2xl flex items-center pb-[55px]">
       <div className="w-full rounded-3xl overflow-hidden">
         <textarea
           autoFocus
@@ -111,7 +111,6 @@ const ChatInput = () => {
           </>
         )}
       </div>
-      <div></div>
     </div>
   );
 };
